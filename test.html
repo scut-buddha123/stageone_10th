@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>six</title>
+    <style>
+    body{
+    	width: 90%;
+    	padding: 0;
+    	margin: 0 auto;
+
+    }
+    ul{
+    	margin:0 auto;
+    	padding:0;
+    	list-style: none;
+    	height:500px;
+
+    }
+    li{
+    	width:150px;
+    	border:1px solid red;
+    	box-sizing: border-box;
+    }
+    #li1{
+    	height:120px;
+    	
+    }
+    #li2{
+    	height:100px;
+    	
+    }
+    #li3{
+    	height:40px;
+    }
+    #li4{
+    	height:200px;
+    }
+    .flex-container{
+    	display: flex;
+    	flex-flow: row wrap;
+    	justify-content: space-between;
+    	align-items: center;
+    }
+
+    @media (max-width: 640px) {
+    	.flex-container{
+    	flex-flow: row wrap;
+		align-items: flex-start;
+    	}
+    	#li4{
+    		-webkit-order:1;
+    		order:-1;
+    	}
+    	#li1{
+    		-webkit-order:10;
+    		order:10;
+    	}
+    }
+
+    </style>
+</head>
+<body>
+    <ul class="flex-container">
+        <li id="li1" class="flex-item">1</li>
+        <li id="li2" class="flex-item">2</li>
+        <li id="li3" class="flex-item">3</li>
+        <li id="li4" class="flex-item">4</li>
+    </ul>
+</body>
